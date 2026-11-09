@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#10130f"><title>RPG MASTER — D&D 5e</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app-shell">
+<aside class="sidebar" id="sidebar">
+  <div class="brand"><div class="brand-mark">✦</div><div><div class="brand-name">RPG <span>MASTER</span></div><div class="brand-sub">GAME MASTER SYSTEM</div></div></div>
+  <div class="campaign-chip"><span class="live-dot"></span><div><small>EDIÇÃO ATIVA</small><strong>DUNGEONS & DRAGONS 5e</strong></div></div>
+  <nav class="main-nav">
+    <div class="nav-label">MESA DO MESTRE</div>
+    <button class="nav-item active" data-view="dashboard"><span>⌂</span> Visão geral</button>
+    <button class="nav-item" data-view="campaigns"><span>♜</span> Campanhas</button>
+    <a class="nav-item" href="mesa-virtual.html" target="_blank" rel="noopener"><span>⚄</span> Mesa virtual</a>
+    <button class="nav-item" data-view="characters"><span>♙</span> Personagens</button>
+    <div class="nav-label">FERRAMENTAS</div>
+    <button class="nav-item" data-view="bestiary"><span>♞</span> Bestiário</button>
+    <button class="nav-item" data-view="generator"><span>✧</span> Geradores</button>
+    <button class="nav-item" data-view="notes"><span>▤</span> Diário do mestre</button>
+  </nav>
+  <div class="sidebar-bottom"><div class="sidebar-quote">“A aventura começa quando a última luz desaparece no horizonte.”</div><div class="sidebar-footer"><span class="status-dot"></span> DADOS SALVOS NESTE DISPOSITIVO</div></div>
+</aside>
+<main class="main-area">
+<header class="topbar"><button class="mobile-menu" id="mobileMenu">☰</button><div class="breadcrumb"><span>RPG MASTER</span><b>/</b><strong id="pageCrumb">VISÃO GERAL</strong></div><div class="top-actions"><span class="system-pill">D&D 5e</span><button class="icon-btn" id="exportBtn" title="Exportar backup">⇩</button><button class="icon-btn" id="importBtn" title="Importar backup">⇧</button><input type="file" id="importFile" accept="application/json,.json" hidden><div class="avatar">M</div></div></header>
+<div class="content">
+<section class="view active" id="view-dashboard">
+  <div class="hero"><div class="hero-copy"><div class="eyebrow"><span class="eyebrow-line"></span> CENTRAL DO MESTRE</div><h1>As histórias não<br><em>se contam sozinhas.</em></h1><p>Prepare o mundo. Reúna os heróis. Conduza a lenda.</p><button class="btn btn-gold" data-action="new-campaign">＋ Criar campanha</button></div><div class="hero-art"><div class="hero-rune">ᛟ</div><div class="hero-d20">✦</div><div class="hero-art-caption">YOUR WORLD<br><b>YOUR LEGEND</b></div></div><div class="hero-grain"></div></div>
+  <div class="section-heading"><div><div class="eyebrow">SEU UNIVERSO</div><h2>Visão geral</h2></div><span class="muted" id="todayLabel"></span></div>
+  <div class="stats-grid">
+    <article class="stat-card"><div class="stat-icon gold">♜</div><div><small>CAMPANHAS</small><strong id="statCampaigns">0</strong><span>mundos criados</span></div></article>
+    <article class="stat-card"><div class="stat-icon blue">♙</div><div><small>PERSONAGENS</small><strong id="statCharacters">0</strong><span>heróis registrados</span></div></article>
+    <article class="stat-card"><div class="stat-icon red">⚔</div><div><small>CRIATURAS</small><strong id="statCreatures">0</strong><span>no seu bestiário</span></div></article>
+    <article class="stat-card"><div class="stat-icon green">▤</div><div><small>ANOTAÇÕES</small><strong id="statNotes">0</strong><span>registros do mestre</span></div></article>
+  </div>
+  <div class="dashboard-grid">
+    <section class="panel"><div class="panel-head"><div><div class="eyebrow">EM DESTAQUE</div><h3>Campanha em andamento</h3></div><span class="tiny-tag">MESA ATIVA</span></div><div id="featuredCampaign" class="featured-content"></div></section>
+    <section class="panel"><div class="panel-head"><div><div class="eyebrow">ATALHOS</div><h3>Preparar a mesa</h3></div></div><div class="quick-actions"><a href="mesa-virtual.html" target="_blank" rel="noopener"><span>⚔</span><b>Abrir Mesa Virtual</b><small>Mapa, névoa e controle de vez</small></a><button data-view-link="characters"><span>♙</span><b>Ver aventureiros</b><small>Consultar quem é quem</small></button><button data-view-link="generator"><span>✧</span><b>Criar um encontro</b><small>Inspiração instantânea</small></button><button data-action="new-note"><span>▤</span><b>Nova anotação</b><small>Registre uma ideia</small></button></div></section>
+  </div>
+  <div class="dashboard-grid lower-grid"><section class="panel"><div class="panel-head"><div><div class="eyebrow">RECENTES</div><h3>Últimas anotações</h3></div><button class="text-btn" data-view-link="notes">Ver diário →</button></div><div id="recentNotes" class="recent-list"></div></section><section class="panel quote-card"><div class="quote-symbol">“</div><p>O destino de um reino pode depender de uma única decisão feita à luz de uma tocha.</p><span>— NOTAS DE UM MESTRE</span></section></div>
+</section>
+
+<section class="view" id="view-campaigns"><div class="page-intro"><div><div class="eyebrow">CONSTRUA SEU MUNDO</div><h1>Campanhas</h1><p>Organize o mundo, a história e os grandes arcos da campanha.</p></div><button class="btn btn-gold" data-action="new-campaign">＋ Nova campanha</button></div><div id="campaignList" class="card-grid"></div></section>
+
+
+<section class="view" id="view-characters">
+ <div class="page-intro"><div><div class="eyebrow">QUEM FAZ PARTE DA JORNADA</div><h1>Aventureiros</h1><p>Um cadastro de referência para o mestre. As fichas e os dados dos jogadores continuam sendo físicos.</p></div><div class="page-intro-actions"><button class="btn btn-quiet" data-action="export-bridge">⇩ Baixar pacote</button><button class="btn btn-gold" data-action="sync-party">↗ Enviar grupo à Mesa</button></div></div>
+ <div class="filter-row"><input id="characterSearch" class="search-input" placeholder="⌕  Buscar jogador, raça ou classe..."><select id="characterCampaignFilter" class="select-input"><option value="">Todas as campanhas</option></select><button class="btn btn-quiet" data-action="new-character">＋ Cadastrar perfil</button></div>
+ <div id="characterList" class="card-grid character-grid"></div>
+ <div class="bridge-note"><b>Integração:</b> envie o grupo para a Mesa Virtual. Os aventureiros entram como miniaturas de perfil, sem ficha digital, PV ou atributos duplicados.</div>
+</section>
+
+
+
+<section class="view" id="view-bestiary"><div class="page-intro"><div><div class="eyebrow">CATÁLOGO DE AMEAÇAS</div><h1>Bestiário</h1><p>Crie e organize criaturas. Envie qualquer uma delas diretamente para a Mesa Virtual.</p></div><button class="btn btn-gold" data-action="new-creature">＋ Nova criatura</button></div><div class="filter-row"><input id="creatureSearch" class="search-input" placeholder="⌕  Buscar criatura..."><select id="creatureTypeFilter" class="select-input"><option value="">Todos os tipos</option><option>Aberração</option><option>Animal</option><option>Constructo</option><option>Dragão</option><option>Humanoide</option><option>Morto-vivo</option><option>Monstruosidade</option><option>Planta</option><option>Outro</option></select></div><div id="creatureList" class="card-grid"></div></section>
+
+<section class="view" id="view-generator"><div class="page-intro"><div><div class="eyebrow">INSPIRAÇÃO PARA SUA CAMPANHA</div><h1>Geradores</h1><p>Quando a imaginação pedir uma faísca, gere novas possibilidades.</p></div></div><div class="generator-grid"><section class="panel generator-card"><div class="generator-icon">♙</div><div class="eyebrow">ENCONTRE UM ROSTO</div><h3>Gerador de NPC</h3><p>Uma pessoa, um segredo e uma razão para entrar na história.</p><div id="npcOutput" class="generator-output">Seu próximo personagem não jogador está esperando.</div><button class="btn btn-gold" data-action="generate-npc">✧ Gerar NPC</button></section><section class="panel generator-card"><div class="generator-icon">⚑</div><div class="eyebrow">UMA NOVA JORNADA</div><h3>Gerador de missão</h3><p>Um objetivo, um conflito e uma recompensa para os aventureiros.</p><div id="questOutput" class="generator-output">Uma aventura pode nascer de um simples pedido.</div><button class="btn btn-gold" data-action="generate-quest">✧ Gerar missão</button></section><section class="panel generator-card"><div class="generator-icon">⚔</div><div class="eyebrow">PERIGO À VISTA</div><h3>Gerador de encontro</h3><p>Uma situação inesperada para desafiar o grupo.</p><div id="encounterOutput" class="generator-output">Nem todo encontro precisa terminar em combate.</div><button class="btn btn-gold" data-action="generate-encounter">✧ Gerar encontro</button></section></div></section>
+
+<section class="view" id="view-notes"><div class="page-intro"><div><div class="eyebrow">SEGREDOS, PISTAS E CONSEQUÊNCIAS</div><h1>Diário do mestre</h1><p>Suas ideias e os acontecimentos que moldam a campanha.</p></div><button class="btn btn-gold" data-action="new-note">＋ Nova anotação</button></div><div class="notes-layout"><div id="notesList" class="notes-list"></div><aside class="panel note-editor"><div class="eyebrow">ESCREVA SUA HISTÓRIA</div><h3 id="noteEditorTitle">Selecione uma anotação</h3><div id="noteEditorBody" class="note-placeholder">Escolha uma anotação à esquerda ou crie uma nova para começar a escrever.</div></aside></div></section>
+<footer class="app-footer"><span>RPG MASTER <b>✦</b> D&D 5e</span><span>Feito para quem conduz as lendas.</span></footer>
+</div></main></div>
+
+<div class="modal-backdrop" id="modalBackdrop" aria-hidden="true"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-head"><div><div class="eyebrow">RPG MASTER</div><h2 id="modalTitle">Novo registro</h2></div><button class="icon-btn" id="closeModal">✕</button></div><form id="modalForm"><div id="modalBody" class="modal-body"></div><div class="modal-actions"><button type="button" class="btn btn-quiet" id="cancelModal">Cancelar</button><button type="submit" class="btn btn-gold">Salvar registro</button></div></form></div></div>
+<div class="toast" id="toast"></div><script src="app.js"></script>
+</body></html>
