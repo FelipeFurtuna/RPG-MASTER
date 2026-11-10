@@ -101,3 +101,31 @@ Avaliar uma solução de sincronização remota como evolução futura, sem comp
 Créditos e marcas
 Projeto independente, não afiliado, patrocinado ou endossado pela Wizards of the Coast. Dungeons & Dragons é uma marca de seus respectivos titulares. Materiais visuais de terceiros devem ser utilizados respeitando seus direitos e licenças.
 Este repositório ainda não possui uma licença open-source definida. A publicação pública do código não concede, por si só, autorização irrestrita para reutilização.
+
+---
+
+# Demonstração visual
+
+Confira algumas telas e funcionalidades do projeto.
+
+## RPG MASTER
+
+### Painel principal
+![Painel](assets/screenshots/rpg-master-dashboard.png)
+
+### Campanhas
+![Campanhas](assets/screenshots/rpg-master-campaigns.png)
+
+### Bestiário
+![Bestiário](assets/screenshots/rpg-master-bestiary.png)
+
+### Geradores
+![Geradores](assets/screenshots/rpg-master-generators.png)
+
+## Mesa Virtual
+
+### Mapas e personagens
+![Mapa](assets/screenshots/mesa-virtual-map.png)
+
+### Iluminação dinâmica
+![Iluminação](assets/screenshots/mesa-virtual-lighting.png)
