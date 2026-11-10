@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="460" viewBox="0 0 1600 460" role="img" aria-labelledby="title desc">
+  <title id="title">RPG MASTER — Prepare o mundo. Conduza a lenda.</title>
+  <desc id="desc">Banner original em tons escuros e dourados, com um símbolo geométrico inspirado em um dado de RPG.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b100d"/>
+      <stop offset=".52" stop-color="#20291e"/>
+      <stop offset="1" stop-color="#0c120e"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop offset="0" stop-color="#c6a66a" stop-opacity=".23"/>
+      <stop offset="1" stop-color="#c6a66a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f0d9a0"/>
+      <stop offset=".5" stop-color="#c6a66a"/>
+      <stop offset="1" stop-color="#80623a"/>
+    </linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#d9d0b0" stroke-opacity=".045"/>
+      <circle cx="0" cy="0" r="1.5" fill="#d9d0b0" fill-opacity=".13"/>
+    </pattern>
+    <filter id="soft"><feGaussianBlur stdDeviation="18"/></filter>
+  </defs>
+  <rect width="1600" height="460" rx="26" fill="url(#bg)"/>
+  <rect width="1600" height="460" rx="26" fill="url(#grid)"/>
+  <ellipse cx="1190" cy="230" rx="340" ry="260" fill="url(#glow)"/>
+  <path d="M40 42H1560M40 418H1560" stroke="url(#gold)" stroke-opacity=".55" stroke-width="1.5"/>
+  <path d="M55 58H440M55 402H440" stroke="#c6a66a" stroke-opacity=".18"/>
+  <g transform="translate(1190 226)">
+    <circle r="174" fill="none" stroke="#c6a66a" stroke-opacity=".24" stroke-width="1.5"/>
+    <circle r="148" fill="none" stroke="#c6a66a" stroke-opacity=".32" stroke-dasharray="3 12" stroke-width="2"/>
+    <circle r="118" fill="none" stroke="#c6a66a" stroke-opacity=".18"/>
+    <path d="M0-126 110-62 91 72 0 132-91 72-110-62Z" fill="#c6a66a" fill-opacity=".06" stroke="url(#gold)" stroke-width="3"/>
+    <path d="M0-126V132M-110-62 91 72M110-62-91 72M-110-62H110" fill="none" stroke="#c6a66a" stroke-opacity=".55" stroke-width="1.5"/>
+    <path d="M0-75 65-37 54 43 0 79-54 43-65-37Z" fill="#c6a66a" fill-opacity=".12" stroke="#e3c98e" stroke-opacity=".8" stroke-width="2"/>
+    <path d="M0-28 24-14 20 17 0 31-20 17-24-14Z" fill="url(#gold)"/>
+    <g fill="#e5d2a3">
+      <circle cx="0" cy="-126" r="4"/><circle cx="110" cy="-62" r="4"/><circle cx="91" cy="72" r="4"/>
+      <circle cx="0" cy="132" r="4"/><circle cx="-91" cy="72" r="4"/><circle cx="-110" cy="-62" r="4"/>
+    </g>
+    <path d="M-205 0h34M171 0h34M0-205v34M0 171v34" stroke="#c6a66a" stroke-opacity=".55" stroke-width="2"/>
+  </g>
+  <g fill="#d7c18e" opacity=".8">
+    <path d="m1000 94 5 13 13 5-13 5-5 13-5-13-13-5 13-5Z"/>
+    <path d="m1390 350 4 10 10 4-10 4-4 10-4-10-10-4 10-4Z"/>
+    <circle cx="1040" cy="330" r="3"/><circle cx="1450" cy="115" r="2.5"/>
+  </g>
+  <g font-family="Georgia, 'Times New Roman', serif">
+    <text x="105" y="176" fill="#d7bd82" font-size="22" letter-spacing="7">GAME MASTER SYSTEM</text>
+    <text x="100" y="260" fill="#f0eadc" font-size="76" font-weight="700" letter-spacing="2">RPG MASTER</text>
+    <path d="M105 284H720" stroke="url(#gold)" stroke-width="3"/>
+    <text x="105" y="333" fill="#d8d1c1" font-size="27" letter-spacing="2">PREPARE O MUNDO. CONDUZA A LENDA.</text>
+    <text x="105" y="378" fill="#a7a995" font-family="Arial, sans-serif" font-size="17" letter-spacing="3">RPG MASTER  /  MESA VIRTUAL  /  D&amp;D 5e</text>
+  </g>
+  <rect x="1" y="1" width="1598" height="458" rx="25" fill="none" stroke="#c6a66a" stroke-opacity=".25" stroke-width="2"/>
+</svg>
