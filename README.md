@@ -1,131 +1,183 @@
-<div align="center">
-  <img src="assets/rpg-master-banner.svg" alt="RPG MASTER — preparação do mestre e mesa virtual" width="100%">
-  <h1>RPG MASTER + Mesa Virtual</h1>
-  <p><strong>Ferramentas para preparar, organizar e conduzir sessões presenciais de RPG de mesa.</strong></p>
-  <p>
-    <a href="https://felipefurtuna.github.io/RPG-MASTER/"><strong>🌐 Acessar aplicação</strong></a>
-    ·
-    <a href="https://github.com/FelipeFurtuna/RPG-MASTER"><strong>⌘ Código-fonte</strong></a>
-  </p>
-  <p><sub>Projeto pessoal em desenvolvimento · D&D 5ª edição como referência de jogo</sub></p>
-</div>
----
-Sobre o projeto
-O RPG MASTER é uma aplicação web criada para apoiar a preparação e a condução de campanhas presenciais de RPG. O projeto reúne dois módulos distintos, que trabalham em conjunto:
-RPG MASTER: central de preparação do mestre, organização narrativa e consulta de informações.
-Mesa Virtual: tabuleiro visual para uso durante a sessão, com mapas, miniaturas, iluminação e ambientação.
-A proposta é complementar a experiência presencial — não substituir as fichas físicas, os dados ou as decisões dos jogadores.
-Acesse
-Recurso	Link
-Aplicação publicada	felipefurtuna.github.io/RPG-MASTER
-Repositório público	github.com/FelipeFurtuna/RPG-MASTER
-Documentação de portfólio	docs/PORTFOLIO.md
-Módulos e funcionalidades
-1. RPG MASTER — preparação do mestre
-Organização de campanhas, cenários e premissas narrativas.
-Cadastro de aventureiros como referência para o mestre: jogador, raça, classe, nível e observações.
-Bestiário para criar e organizar criaturas, com informações descritivas e de combate.
-Geradores de NPCs, missões e encontros para apoiar a improvisação.
-Diário do mestre para registrar pistas, ideias, acontecimentos e segredos.
-Exportação e importação de backups em JSON.
-2. Mesa Virtual — apoio visual à sessão
-Mapas ilustrados, ambientes e miniaturas movimentáveis.
-Névoa de guerra e campo de visão.
-Transições individuais entre ambientes por portas.
-Controle manual da vez dos participantes.
-Controle de pontos de vida, dano e cura para miniaturas que usam controle digital.
-Efeitos visuais de condições, magia e elementos.
-Clima, chuva e modo noturno.
-Iluminação dinâmica configurável, com fontes de luz, alcance, intensidade, cor e tremulação.
-Player de música e efeitos sonoros.
-Inventário individual e títulos cinematográficos sobre o mapa.
-Decisões de projeto
-O jogo continua sendo presencial:
-Os jogadores usam suas próprias fichas e rolam dados físicos.
-Não há rolador de dados digital.
-Não há iniciativa automática.
-O controle de combate na Mesa Virtual é um apoio visual e manual para o mestre.
-Tecnologias utilizadas
-Tecnologia	Aplicação no projeto
-HTML5	Estrutura das interfaces
-CSS3	Layout, identidade visual e responsividade
-JavaScript (Vanilla)	Regras de interface, estado e interações
-Canvas API	Renderização e interação visual com o mapa
-localStorage	Persistência local no navegador
-JSON e File API	Exportação e importação de dados
-GitHub Pages	Hospedagem estática da aplicação
-O projeto não exige instalação de dependências ou etapa de build.
-Estrutura do repositório
-```text
-RPG-MASTER/
-├── index.html          # Interface principal do RPG MASTER
-├── app.js              # Lógica e interações do RPG MASTER
-├── style.css           # Estilos do RPG MASTER
-├── mesa-virtual.html   # Módulo independente da Mesa Virtual
-├── README.md           # Apresentação e documentação
-├── assets/             # Materiais visuais da documentação
-└── docs/               # Documentação complementar
-```
-A Mesa Virtual é mantida como um HTML independente, com sua implementação visual e recursos incorporados. Os dois módulos permanecem separados para que cada um tenha seu próprio fluxo de uso.
-Executar localmente
-Baixe ou clone este repositório.
-Mantenha `index.html`, `app.js`, `style.css` e `mesa-virtual.html` na mesma pasta.
-Inicie um servidor local nessa pasta. No Windows, por exemplo:
-```powershell
-   py -m http.server 8000
-   ```
-Abra `http://localhost:8000` no navegador.
-Acesse a Mesa Virtual pelo menu do RPG MASTER.
-Também é possível usar a extensão Live Server no Visual Studio Code.
-Publicação
-A aplicação é hospedada pelo GitHub Pages a partir da branch `main`, diretório raiz (`/(root)`).
-Endereço público:  
-https://felipefurtuna.github.io/RPG-MASTER/
-Dados, privacidade e limitações
-Os dados criados durante o uso ficam armazenados localmente no navegador.
-Esta versão não possui backend, autenticação ou banco de dados remoto.
-Os dados não são sincronizados automaticamente entre computadores ou navegadores.
-Para transferir campanhas e configurações, use os recursos de exportação e importação de backup.
-Não envie backups pessoais, informações privadas dos jogadores, senhas ou chaves de API para este repositório público.
-Participação no desenvolvimento
-O projeto foi idealizado e conduzido pelo autor, que definiu a proposta, priorizou funcionalidades, tomou decisões de experiência e direção visual, testou os fluxos e orientou as correções ao longo da evolução.
-A implementação e a evolução do código contaram com assistência de ferramentas de inteligência artificial. Essa participação é descrita de forma transparente: o projeto demonstra também capacidade de levantar requisitos, avaliar resultados, identificar problemas, validar funcionalidades e conduzir um produto digital.
-Veja uma descrição mais completa em Documentação de portfólio.
-Capturas de tela
-As capturas reais da aplicação serão adicionadas após uma seleção das telas finais. Para manter a documentação fiel ao produto, esta seção não usa mockups ou imagens ilustrativas como se fossem screenshots. Consulte docs/SCREENSHOTS.md para a lista de imagens recomendadas.
-Próximas evoluções
-Ampliar a galeria com capturas reais da aplicação.
-Melhorar a organização interna e a manutenção dos módulos.
-Expandir mapas, recursos visuais e opções de ambientação.
-Avaliar uma solução de sincronização remota como evolução futura, sem comprometer o funcionamento local atual.
-Créditos e marcas
-Projeto independente, não afiliado, patrocinado ou endossado pela Wizards of the Coast. Dungeons & Dragons é uma marca de seus respectivos titulares. Materiais visuais de terceiros devem ser utilizados respeitando seus direitos e licenças.
-Este repositório ainda não possui uma licença open-source definida. A publicação pública do código não concede, por si só, autorização irrestrita para reutilização.
+
+![RPG MASTER](assets/rpg-master-banner.svg)
+
+# RPG MASTER + Mesa Virtual
+
+**Prepare o mundo. Conduza a lenda.**
+
+Uma aplicação web desenvolvida para auxiliar mestres na preparação e condução de sessões presenciais de RPG de mesa, utilizando D&D 5ª edição como referência.
+
+🌐 [Acessar aplicação](https://felipefurtuna.github.io/RPG-MASTER/) | 💻 [Código-fonte](https://github.com/FelipeFurtuna/RPG-MASTER)
 
 ---
 
-# Demonstração visual
+## Sobre o projeto
 
-Confira algumas telas e funcionalidades do projeto.
+O RPG MASTER é um projeto pessoal que reúne duas ferramentas integradas:
 
-## RPG MASTER
+- **RPG MASTER:** ambiente de preparação do mestre, organização de campanhas, bestiário e geradores.
+- **Mesa Virtual:** tabuleiro visual para utilização durante as sessões, com mapas, personagens, iluminação e efeitos de ambientação.
 
-### Painel principal
-![Painel](assets/screenshots/rpg-master-dashboard.png)
+O objetivo é oferecer ferramentas para enriquecer as partidas presenciais, sem substituir a experiência tradicional de jogar RPG.
 
-### Campanhas
+## Funcionalidades
+
+### RPG MASTER
+
+- Organização de campanhas e contexto narrativo.
+- Consulta de personagens e suas características.
+- Bestiário para organização de monstros e criaturas.
+- Geradores de NPCs, missões e encontros.
+- Ferramentas de apoio à preparação do mestre.
+
+### Mesa Virtual
+
+- Mapas ilustrados em estilo pixel art.
+- Miniaturas de personagens e monstros animados.
+- Movimentação individual dos participantes.
+- Transições entre ambientes por portas.
+- Névoa de guerra e campo de visão.
+- Controle manual da vez dos participantes.
+- Controle visual de vida, dano e cura.
+- Efeitos visuais de condições e elementos.
+- Iluminação dinâmica configurável.
+- Chuva, noite e efeitos climáticos.
+- Música e efeitos sonoros.
+- Inventário e títulos cinematográficos.
+
+### Filosofia do projeto
+
+O RPG continua sendo presencial:
+
+- Os jogadores utilizam suas próprias fichas.
+- As rolagens são feitas com dados físicos.
+- Não existe rolador de dados digital.
+- Não existe iniciativa automática.
+- O controle de combate é visual e manual, auxiliando o mestre durante a sessão.
+
+---
+
+## Demonstração visual
+
+As imagens abaixo mostram funcionalidades reais da aplicação.
+
+### RPG MASTER
+
+**Tela inicial**
+
+![Tela inicial](assets/screenshots/rpg-master-dashboard.png)
+
+**Campanhas**
+
 ![Campanhas](assets/screenshots/rpg-master-campaigns.png)
 
-### Bestiário
+**Bestiário**
+
 ![Bestiário](assets/screenshots/rpg-master-bestiary.png)
 
-### Geradores
+**Geradores**
+
 ![Geradores](assets/screenshots/rpg-master-generators.png)
 
-## Mesa Virtual
+### Mesa Virtual
 
-### Mapas e personagens
-![Mapa](assets/screenshots/mesa-virtual-map.png)
+**Mapa e personagens**
 
-### Iluminação dinâmica
+![Mesa Virtual](assets/screenshots/mesa-virtual-map.png)
+
+**Iluminação dinâmica**
+
 ![Iluminação](assets/screenshots/mesa-virtual-lighting.png)
+
+---
+
+## Tecnologias utilizadas
+
+| Tecnologia | Aplicação |
+|---|---|
+| HTML5 | Estrutura das interfaces |
+| CSS3 | Layout, identidade visual e responsividade |
+| JavaScript | Lógica e interações |
+| Canvas API | Renderização e interação visual |
+| localStorage | Persistência local |
+| JSON | Exportação e importação de dados |
+| GitHub Pages | Hospedagem da aplicação |
+
+## Estrutura do projeto
+
+```text
+RPG-MASTER/
+├── assets/
+│   ├── rpg-master-banner.svg
+│   └── screenshots/
+├── docs/
+│   ├── PORTFOLIO.md
+│   └── SCREENSHOTS.md
+├── app.js
+├── index.html
+├── mesa-virtual.html
+├── style.css
+├── .gitignore
+└── README.md
+```
+
+## Como executar localmente
+
+1. Clone ou baixe o repositório.
+2. Mantenha os arquivos principais na mesma pasta.
+3. Abra um terminal dentro da pasta do projeto.
+4. Execute:
+
+```powershell
+py -m http.server 8000
+```
+
+5. Acesse no navegador:
+
+```text
+http://localhost:8000
+```
+
+Também é possível utilizar a extensão Live Server do Visual Studio Code.
+
+## Publicação
+
+O projeto está hospedado pelo GitHub Pages.
+
+**Endereço público:**
+
+https://felipefurtuna.github.io/RPG-MASTER/
+
+## Dados e privacidade
+
+- Os dados são armazenados localmente no navegador.
+- Esta versão não utiliza backend ou banco de dados remoto.
+- Não existe sincronização automática entre dispositivos.
+- Backups podem ser utilizados para transferir informações entre ambientes.
+
+Não publique informações pessoais de jogadores, senhas ou backups privados no repositório público.
+
+## Participação no desenvolvimento
+
+O projeto foi idealizado e conduzido pelo autor, que definiu a proposta, estabeleceu prioridades, tomou decisões de interface e experiência, selecionou referências, testou funcionalidades e orientou correções e melhorias.
+
+A implementação e evolução do código contaram com assistência de ferramentas de inteligência artificial, utilizadas como apoio durante o desenvolvimento.
+
+O projeto demonstra experiência prática com definição de requisitos, organização de funcionalidades, testes, validação de interfaces e evolução de uma aplicação web.
+
+Para conhecer melhor as decisões e a participação no projeto, consulte [Documentação de Portfólio](docs/PORTFOLIO.md).
+
+## Próximas melhorias
+
+- Expansão dos mapas e ambientes.
+- Novos recursos de ambientação.
+- Melhorias de organização e manutenção do código.
+- Evolução da persistência e sincronização dos dados.
+
+## Créditos
+
+Projeto independente, não afiliado, patrocinado ou endossado pela Wizards of the Coast.
+
+Dungeons & Dragons é uma marca de seus respectivos titulares.
+
+O repositório ainda não possui licença open-source definida. A disponibilização pública não significa autorização irrestrita de reutilização.
